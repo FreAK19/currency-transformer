@@ -1,0 +1,112 @@
+{
+  "name": "currency-transformer",
+  "version": "1.0.0",
+  "description": "simple React app showing different currency from fixer.io API",
+  "main": "index.js",
+  "author": "FreAK19 (Andrew Kiri4encko)",
+  "license": "MIT",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "currency-transformer",
+    "react",
+    "redux"
+  ],
+  "scripts": {
+    "build": "webpack --env production",
+    "start": "webpack-dev-server --env development",
+    "format": "prettier --single-quote --write --print-width=120 --tab-width=2 \"src/**/*.{js,jsx}\"",
+    "lint": "eslint src/**/*.{js,jsx} --quiet --fix",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u"
+  },
+  "dependencies": {
+    "material-ui": "^0.20.0",
+    "preact": "^8.2.7",
+    "preact-compat": "^3.18.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "redux-undo": "^0.6.1"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1",
+    "autoprefixer": "^7.2.5",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fetch-mock": "^6.0.0",
+    "file-loader": "^1.1.6",
+    "flow-bin": "^0.65.0",
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.1.0",
+    "prettier": "^1.10.2",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack-plugin": "^2.0.3",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/__tests__/setup/jestSetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      ".*\\.less$|\\.css$": "<rootDir>/src/__tests__/setup/dummy.js"
+    },
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/build/",
+      "/src/__tests__/setup/"
+    ]
+  }
+}

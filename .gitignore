@@ -1,0 +1,8 @@
+.idea
+.DS-Store
+npm-debug.log
+yarn-error.log
+bower_components
+node_modules
+build
+*.swp
